@@ -3,6 +3,7 @@ import {Grid, Header, Image, Card, Button, Icon} from "semantic-ui-react"
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 import ExploreFriends from "./ExploreFriends";
+import MyPosts from './MyPosts';
 
 class Home extends React.Component {
 
@@ -64,10 +65,14 @@ class Home extends React.Component {
         
          </Grid.Row>
        </Grid>
+       <Grid.Column>
+          <MyPosts />   
+       </Grid.Column>
 
        <Grid.Column>
        <ExploreFriends />
        </Grid.Column>
+       
     </Grid>
     )
   }

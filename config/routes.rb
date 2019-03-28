@@ -4,7 +4,9 @@ Rails.application.routes.draw do
  
 
   namespace :api do
-    resources :users, only: [:index, :update]
+    resources :users, only: [:index, :update] do
+      resources :posts
     get 'my_friends', to: 'users#my_friends'
+    end
   end
 end
