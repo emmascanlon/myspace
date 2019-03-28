@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   include DeviseTokenAuth::Concerns::User
 
+  has_many :posts, dependent: :destroy
   serialize :friend_connections, Array
 
   def self.random_user(ids)
